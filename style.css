@@ -9,11 +9,25 @@
 }
 
 button {
-    border: initial;
+    border: none;
     background-color: initial;
     color: initial;
     font: initial; /* inherit all of fonts (font-family and font-size)*/   
     outline: none; /*We remove ugly outline for TAB on keyboard for focus state*/
+}
+
+input {
+    font: inherit; /*we want to force all of the input fields to inherit all the styles related to the font*/
+    border:none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 /* BASE STYLES */
@@ -49,10 +63,92 @@ button {
 .header {
     grid-column: 1 /3;
     grid-row: 1/2;
-
+    display: flex;
+    align-items: center;
 
 }
 
+.logo{
+    margin-left: 26px;
+    margin-right: 48px;
+}
+
+.search {
+    position: relative;
+}
+
+.search__input {
+    background-color: #EEF3F4;
+    height: 34px;
+    width: 405px;
+    border-radius: 500px;
+    font-size: 13px;
+    color:#555A5B;
+    padding-left: 20px;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.search__input:focus {
+    width: 425px;
+}
+.search__input::placeholder {
+    color: #a9b4b7;
+}
+
+.search__submit {
+    font-size: 15px;
+    color:#a9b4b7;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: absolute;
+    right: 13px;
+    top:8px;
+}
+
+.search__submit:focus {
+    color: #555A5B;
+}
+
+.search__icon {
+
+}
+
+.nav {
+    margin-left: auto;
+    
+    
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__item {
+
+}
+
+.nav__link {
+    padding: 0 20px;
+    transition: all 0.2s;
+    height: 65px;
+    display: block;
+    display: flex;
+    align-items: center;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+    background-color: #EEF3F4;
+}
+
+.nav__icon {
+    color: #A9B4B7;
+    font-size: 22px;
+
+}
+
+/*------------------------------*/
 .sidebar {
     background-color: #11271F;
     grid-column: 1/2;
@@ -60,6 +156,8 @@ button {
 
 }
 
+
+/* -------------------------------*/
 .gallery {
     background-color: #EEF3F4;
     grid-column: 2/3;
@@ -67,6 +165,7 @@ button {
 
 }
 
+/*-------------------------------------*/
 .steps {
     background-color: #E7EDEE;
     grid-column: 2/3;
