@@ -503,5 +503,66 @@ a {
     background-color: #E7EDEE;
     grid-column: 2/3;
     grid-row: 3/4;
+    display: flex;
+}
+
+.step {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    &__container{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        &__icon {
+            font-size: 20px;
+            
+            
+            &--1 {
+                color: #67B941;
+    
+            }
+    
+            &--2 {
+                color: #38B049;
+    
+            }
+    
+            &--3 {
+                color: #1EA97B;
+    
+            }
+    
+        }
+
+    }
+
+
+    &__text {
+        color: $color-grey-dark;
+        font-size: 12px;
+        line-height: 1.8;
+        text-align: center;
+
+    }
+
+}
+
+.second-heading{
+    color: #161616;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom:6px;
+
 
 }
